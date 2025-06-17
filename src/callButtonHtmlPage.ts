@@ -66,7 +66,7 @@ export const callButtonHtmlPage = `<!DOCTYPE html>
         method : 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer 58c6dc6162b0ebc7048c1e569631611a3172d2d06c43c17a4f6ddd58fd35d44845d91dec263f641ff7144f79c4844017'
+          'Authorization': 'Bearer Your Bland Ai Auth_Token_Here'
         },
         body   : '{}'         // some servers require a body even if unused
       });
