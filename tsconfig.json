@@ -3,6 +3,16 @@
 		"allowJs": true,
 		"allowSyntheticDefaultImports": true,
 		"baseUrl": "src",
+		"paths": {
+			"@/*": ["*"],
+			"@/controllers/*": ["controllers/*"],
+			"@/services/*": ["services/*"],
+			"@/middleware/*": ["middleware/*"],
+			"@/types/*": ["types/*"],
+			"@/utils/*": ["utils/*"],
+			"@/config/*": ["config/*"],
+			"@/constants/*": ["constants/*"]
+		},
 		"declaration": true,
 		"sourceMap": true,
 		"esModuleInterop": true,
@@ -12,21 +22,28 @@
 		"listFiles": false,
 		"moduleResolution": "node",
 		"noFallthroughCasesInSwitch": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
 		"pretty": true,
 		"resolveJsonModule": true,
 		"rootDir": ".",
 		"skipLibCheck": true,
-		"strict": false,
+		"strict": true,
+		"strictNullChecks": true,
 		"traceResolution": false,
-		"outDir": "",
+		"outDir": "dist",
 		"target": "esnext",
 		"module": "esnext",
 		"types": [
 			"@types/node",
 			"@types/service-worker-mock",
-			"@cloudflare/workers-types/2023-07-01"
+			"@cloudflare/workers-types/2023-07-01",
+			"@types/jest"
 		]
 	},
-	"exclude": ["node_modules", "dist", "tests"],
-	"include": ["src", "scripts"]
+	"exclude": ["node_modules", "dist", "tests", ".wrangler"],
+	"include": ["src/**/*", "tests/**/*"]
 }
